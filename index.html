@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Stock Trading - Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            background: url('images/hero.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .content {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .content h1, .content h2, .content p {
+            color: white;
+        }
+
+        .logo img {
+            max-width: 150px; /* Adjust the logo size */
+            height: auto;
+        }
+
+        .card {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="header"></div>
+
+    <div class="container my-5 content">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h1>Welcome to Elite Stock Trading</h1>
+                <p>Join the elite community of successful traders.</p>
+            </div>
+        </div>
+
+        <div class="row my-5">
+            <div class="col-md-6">
+                <img src="images/feature1.jpg" class="img-fluid" alt="Expert Analysis">
+            </div>
+            <div class="col-md-6">
+                <h2>Expert Analysis</h2>
+                <p>Receive detailed market insights from top analysts to make informed trading decisions. Our experts provide thorough analyses on market trends, stock performances, and economic indicators to help you stay ahead in the trading game.</p>
+            </div>
+        </div>
+
+        <div class="row my-5">
+            <div class="col-md-6">
+                <img src="images/feature2.jpg" class="img-fluid" alt="Premium Tools">
+            </div>
+            <div class="col-md-6">
+                <h2>Premium Tools</h2>
+                <p>Utilize our advanced trading tools to enhance your trading strategies. Our platform offers a wide range of tools to help you analyze markets, monitor trends, and execute trades with precision.</p>
+            </div>
+        </div>
+
+        <div class="row my-5">
+            <div class="col-md-6">
+                <img src="images/feature3.jpg" class="img-fluid" alt="Live Trading Sessions">
+            </div>
+            <div class="col-md-6">
+                <h2>Live Trading Sessions</h2>
+                <p>Join our live trading sessions to learn from experienced traders in real-time. Gain valuable insights and tips from professionals who have mastered the art of trading.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+        
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+</body>
+</html>

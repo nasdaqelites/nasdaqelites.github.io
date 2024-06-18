@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Stock Trading - Contact</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<style>
+    body {
+        background: url('images/hero.jpg') no-repeat center center fixed;
+        background-size: cover;
+    }
+
+    .content {
+        background-color: rgba(0, 0, 0, 0.6);
+        color: white;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .content h1, .content h2, .content p {
+        color: white;
+    }
+
+    .logo img {
+        max-width: 150px; /* Adjust the logo size */
+        height: auto;
+    }
+
+    .card {
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+    }
+</style>
+<body>
+    <div id="header"></div>
+
+    <section id="contact" class="container my-5">
+        <div class="container my-5 content">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Contact Us</h2>
+                <form action="/submit-form" method="POST" class="needs-validation" novalidate>
+                    <div class="mb-3">
+                        <label for="pricing" class="form-label">Our Pricing is $299/month, which is definitely worth your investment, are you okay with that?</label>
+                        <input type="text" class="form-control" id="price" name="price" required>
+                        <div class="invalid-feedback">Please enter yes if you want to join us.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Wechat ID:</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                        <div class="invalid-feedback">Please enter your wechat ID.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message:</label>
+                        <textarea class="form-control" id="message" name="message" required></textarea>
+                        <div class="invalid-feedback">Please enter your message.</div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-dark">Submit</button>
+                </form>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <div id="footer"></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+        
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
