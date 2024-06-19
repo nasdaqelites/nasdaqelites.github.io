@@ -7,63 +7,111 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            background: url('images/hero.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .content {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .content h1, .content h2, .content p {
+            color: white;
+        }
+
+        .logo img {
+            max-width: 150px; /* Adjust the logo size */
+            height: auto;
+        }
+
+        .card {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+        }
+
+        .disclaimer {
+            background-color: rgba(255, 255, 255, 0.8);
+            color: black;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .small-text {
+            font-size: 0.75rem; /* Smaller font size */
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
 </head>
-<style>
-    body {
-        background: url('images/hero.jpg') no-repeat center center fixed;
-        background-size: cover;
-    }
-
-    .content {
-        background-color: rgba(0, 0, 0, 0.6);
-        color: white;
-        padding: 20px;
-        border-radius: 10px;
-    }
-
-    .content h1, .content h2, .content p {
-        color: white;
-    }
-
-    .logo img {
-        max-width: 150px; /* Adjust the logo size */
-        height: auto;
-    }
-
-    .card {
-        background-color: rgba(0, 0, 0, 0.8);
-        color: white;
-    }
-</style>
 <body>
     <div id="header"></div>
 
     <section id="contact" class="container my-5">
         <div class="container my-5 content">
-        <div class="row">
-            <div class="col-md-12">
-                <h2>Contact Us</h2>
-                <form action="/submit-form" method="POST" class="needs-validation" novalidate>
-                    <div class="mb-3">
-                        <label for="pricing" class="form-label">Our Pricing is $299/month, which is definitely worth your investment, are you okay with that?</label>
-                        <input type="text" class="form-control" id="price" name="price" required>
-                        <div class="invalid-feedback">Please enter yes if you want to join us.</div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="disclaimer">
+                        <h2><strong>Potential Risks and Disclaimers</strong></h2>
+                        <ul>
+                            <li><strong>Set the right expectations</strong>: You cannot become a billionaire overnight. This mindset may cause you to lose money. </li>
+                            <li><strong>Trading involves significant risk</strong>: Only invest money you can afford to lose.</li>
+                            <li><strong>Past performance is not indicative of future results</strong>: Success in trading in the past does not guarantee future success.</li>
+                            <li><strong>Market volatility: The stock market can be unpredictable</strong>, and prices can fluctuate rapidly.</li>
+                            <li><strong>Emotional discipline: It is crucial to remain calm and disciplined</strong>. Emotional trading can lead to significant losses.</li>
+                            <li><strong>Continuous learning</strong>: Successful trading requires continuous education and staying updated with market trends.</li>
+                            <li><strong>Seek professional advice</strong>: Consider consulting with a financial advisor before making investment decisions.</li>
+                        </ul>
                     </div>
-                    <div class="mb-3">
-                        <label for="name" class="form-label">Wechat ID:</label>
-                        <input type="text" class="form-control" id="name" name="name" required>
-                        <div class="invalid-feedback">Please enter your wechat ID.</div>
-                    </div>
-                    <div class="mb-3">
-                        <label for="message" class="form-label">Message:</label>
-                        <textarea class="form-control" id="message" name="message" required></textarea>
-                        <div class="invalid-feedback">Please enter your message.</div>
-                    </div>
-                    
-                    <button type="submit" class="btn btn-dark">Submit</button>
-                </form>
+
+                    <h2>Contact Us</h2>
+                    <form action="https://formspree.io/f/xeqyyyzo" method="POST" class="needs-validation" novalidate>
+                        <div class="mb-3">
+                            <label for="pricing" class="form-label">Our Pricing is $299/month, are you okay with it?</label>
+                            <br>
+                            <small class="form-text" style="color: white;">Sorry, we do not offer free trials, all our elite members have paid.</small>
+                            <input type="text" class="form-control" id="price" name="price" required>
+                            <div class="invalid-feedback">Please enter yes if you want to join us.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="pricing" class="form-label">How long have you been trading in your lifetime?</label>
+                            <br>
+                            <input type="text" class="form-control" id="duration" name="duration" required>
+                            <div class="invalid-feedback">Please enter how long you have been trading.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="pricing" class="form-label">What is your investment goal?</label>
+                            <br>
+                            <input type="text" class="form-control" id="goal" name="goal" required>
+                            <div class="invalid-feedback">Please enter your goal?.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Your Wechat ID (Please make sure this is correct‼️)</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                            <div class="invalid-feedback">Please enter your wechat ID.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Your Message to us:</label>
+                            <textarea class="form-control" id="message" name="message" required></textarea>
+                            <div class="invalid-feedback">Please enter your message.</div>
+                        </div>
+                        <div class="button-container">
+                            If we find you a good fit, we will reach out to you within one day since the form submission.
+                        </div>
+                        <br>
+                        <div class="button-container">
+                            <button type="submit" class="btn btn-dark">Submit</button>
+                        </div>
+                    </form>
+                </div>
             </div>
-        </div>
         </div>
     </section>
 
@@ -78,7 +126,5 @@
             .then(response => response.text())
             .then(data => document.getElementById('footer').innerHTML = data);
     </script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
